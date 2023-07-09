@@ -1,4 +1,7 @@
 const hobbies = ['Cricket', 'Football', 'Video Games', 'Chess'];
+// Reference types
+hobbies.unshift('Cooking');
+hobbies.shift();
 
 for (let hobby of hobbies) {
   console.log(hobby);
