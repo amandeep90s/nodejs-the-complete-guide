@@ -7,7 +7,7 @@ const requestHandler = (req, res) => {
 
   if (url === '/') {
     res.write('<html>');
-    res.write('<head><title>My first nodejs page</title></head>');
+    res.write('<head><title>My first Node.js page</title></head>');
     res.write(
       '<body><form action="/message" method="POST"><input type="text" name="message"><button type="submit">Send</button></form></body>'
     );
