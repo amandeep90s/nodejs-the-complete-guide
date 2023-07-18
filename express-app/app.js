@@ -3,6 +3,11 @@ const http = require('http');
 
 const app = express();
 
+app.use((req, res, next) => {
+  console.log('I am inside the middleware');
+  next();
+});
+
 const server = http.createServer(app);
 
 server.listen(3000, () => {
