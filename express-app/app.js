@@ -10,6 +10,8 @@ app.use(express.json()); // for parsing application/json
 
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
+app.use(express.static(path.join(__dirname, "public"))); // for serving static files
+
 app.use(shopRoutes);
 app.use("/admin", adminRoutes);
 
