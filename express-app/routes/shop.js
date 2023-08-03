@@ -10,8 +10,11 @@ router.get('/', (req, res, next) => {
   const { products } = adminData;
   res.render('shop', {
     prods: products,
-    docTitle: 'Shop',
+    docTitle: 'Shop Page',
     path: '/',
+    hasProducts: products.length > 0,
+    activeShop: true,
+    productCSS: true,
   });
 });
 
