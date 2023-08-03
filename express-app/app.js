@@ -1,7 +1,8 @@
 const express = require("express");
+const morgan = require("morgan");
 const path = require("path");
 
-const adminRoutes = require("./routes/admin");
+const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 const app = express();
@@ -12,8 +13,10 @@ app.use(express.urlencoded({ extended: true })); // for parsing application/x-ww
 
 app.use(express.static(path.join(__dirname, "public"))); // for serving static files
 
+app.use(morgan("dev"));
+
 app.use(shopRoutes);
-app.use("/admin", adminRoutes);
+app.use("/admin", adminData.router);
 
 app.use("*", (req, res, next) => {
   res.status(404).sendFile(path.join(__dirname, "views", "errors", "404.html"));
