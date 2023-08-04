@@ -1,5 +1,4 @@
 const express = require('express');
-const epressHbs = require('express3-handlebars');
 const morgan = require('morgan');
 const path = require('path');
 
@@ -8,15 +7,7 @@ const shopRoutes = require('./routes/shop');
 
 const app = express();
 
-app.engine(
-  'hbs',
-  epressHbs({
-    layoutsDir: 'views/layouts/',
-    defaultLayout: 'main-layout',
-    extname: 'hbs',
-  })
-);
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.use(express.json()); // for parsing application/json
