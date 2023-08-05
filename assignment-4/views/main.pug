@@ -1,0 +1,10 @@
+extends layouts/main-layout.pug
+
+block content 
+  main 
+    h1 User Form
+    form(action="/" method="post") 
+      .form-control 
+        label(for="username") Username 
+        input#username(type="text" name="username" required="required" class="form-control")
+      button.btn(type="submit") Save User
