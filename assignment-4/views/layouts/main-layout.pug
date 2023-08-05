@@ -8,4 +8,11 @@ html(lang="en")
 
     block styles
   body 
+    header 
+      nav 
+        ul.users-list 
+          li 
+            a(href="/" class=(path === '/' ? 'active': '')) Home
+          li 
+            a(href="/users" class=(path === '/users' ? 'active': '')) Users
     block content 

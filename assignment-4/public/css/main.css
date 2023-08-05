@@ -3,3 +3,31 @@
   padding: 0;
   outline: none;
 }
+
+body {
+  background-color: dodgerblue;
+  color: #fff;
+}
+
+.not-found {
+  color: red;
+}
+
+ul.users-list {
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+}
+
+ul.users-list li {
+  margin: 0 1rem;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+.active {
+  color: #333;
+  text-decoration: none;
+}
