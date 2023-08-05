@@ -8,7 +8,7 @@ const errorController = require('./controllers/errors');
 
 const app = express();
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 app.set('views', './views');
 
 app.use(express.json()); // for parsing application/json
