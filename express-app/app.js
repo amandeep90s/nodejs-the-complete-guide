@@ -4,6 +4,7 @@ const path = require('path');
 
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+const errorController = require('./controllers/errors');
 
 const app = express();
 
@@ -18,12 +19,10 @@ app.use(express.static(path.join(__dirname, 'public'))); // for serving static f
 
 app.use(morgan('dev'));
 
-app.use(shopRoutes);
+app.use('/', shopRoutes);
 app.use('/admin', adminRoutes);
 
-app.use('*', (req, res, next) => {
-  res.status(404).render('404', { docTitle: 'Page Not Found' });
-});
+app.use('*', errorController.get404);
 
 app.listen(3000, () => {
   console.log(`Server running on localhost:3000`);
