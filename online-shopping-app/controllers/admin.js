@@ -18,10 +18,10 @@ const postAddProduct = (req, res, next) => {
 
 const getProducts = (req, res, next) => {
   Product.fetchAll((products) => {
-    res.render('shop/product-list', {
+    res.render('admin/products', {
       prods: products,
-      docTitle: 'Shop Page',
-      path: '/',
+      docTitle: 'Admin Product Page',
+      path: '/admin/products',
       hasProducts: products.length > 0,
       activeShop: true,
       productCSS: true,
