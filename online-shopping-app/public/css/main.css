@@ -10,9 +10,18 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+a,
+a:hover {
+  text-decoration: none;
+}
+
 main {
   padding: 1rem;
   margin: auto;
+}
+
+form {
+  display: inline;
 }
 
 .main-header {
@@ -83,13 +92,13 @@ main {
 }
 
 .card__actions {
-    padding: 1rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .card__actions button,
 .card__actions a {
-    margin: 0 0.25rem;
+  margin: 0 0.25rem;
 }
 
 .btn {
@@ -99,6 +108,7 @@ main {
   background: white;
   border-radius: 3px;
   cursor: pointer;
+  padding: 0 1rem;
 }
 
 .btn:hover,
