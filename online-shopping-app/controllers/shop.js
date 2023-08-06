@@ -28,7 +28,9 @@ const getProducts = (req, res, next) => {
 
 const getProduct = (req, res, next) => {
   const { productID } = req.params;
-  console.log(productID);
+  Product.findById(productID, (product) => {
+    console.log(product);
+  });
   res.redirect('/');
 };
 
