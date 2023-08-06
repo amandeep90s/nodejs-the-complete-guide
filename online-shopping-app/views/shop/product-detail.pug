@@ -1,5 +1,12 @@
 extends ../layouts/main-layout.pug 
 
 block content
-  main 
-    h1 Product Detail Page
+  main.center
+    h1 #{product.title}
+    hr
+    div 
+      img(src=(product.imageUrl), alt=(product.title) width="300")
+    h2 Price $#{product.price}
+    p #{product.description}
+    form(action="/add-to-cart" method="post") 
+      button.btn(type="submit") Add to Cart
