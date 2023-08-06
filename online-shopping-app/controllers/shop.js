@@ -40,4 +40,11 @@ const getCheckout = (req, res, next) => {
   });
 };
 
-module.exports = { getIndex, getProducts, getCart, getCheckout };
+const getOrders = (req, res, next) => {
+  res.render('shop/orders', {
+    docTitle: 'Orders Page',
+    path: '/orders',
+  });
+};
+
+module.exports = { getIndex, getProducts, getCart, getCheckout, getOrders };
